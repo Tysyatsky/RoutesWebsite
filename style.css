@@ -211,11 +211,6 @@ li {
     text-align: left;
 }
 
-.inline { 
-    display: inline-block; 
-    margin: 10px;
-}
-
 .footer_baner_color{
     position: absolute;
     width: 90%;
@@ -238,8 +233,9 @@ li {
 
 .contact{
     position: absolute;
-    width: 100%;
-    height: 80%;
+    display: grid;
+    grid-template-columns: 2fr 0.9fr;
+    top: 45%;
     left: 10%;
     color: #F2D8C7;
     text-align: left;
@@ -250,25 +246,16 @@ li {
     z-index: 120;
 }
 
-#telephone{
-    top: 50%;
-    left: 10%;
+.contact h4{
     font-size: 24px;
     line-height: 40px;
 }
 
-#email{
-    top: 50%;
-    left: 60%;
-    font-size: 24px;
-    line-height: 40px;
+.scroll_padding{
+    padding-left: 5%;
 }
 
-.interactive_padding{
-    padding: 5%;
-}
-
-.interactive_block{
+.scroll_block{
     display: grid;
     grid-template-columns: 4fr 0.9fr;
 }
@@ -280,7 +267,7 @@ li {
 }
 
 
-.interactive_wrap{
+.scroll_block_wrap{
     display: grid;
     grid-auto-flow: row dense;
     grid-template-columns: 1fr;
@@ -288,23 +275,24 @@ li {
     margin-right: 5%;
 }
 
-.interactive_wrap h2{
+.scroll_block_wrap h2{
     position: relative;
     left: 20px;
 }
 
-.interactive_wrap p {
+.scroll_block_wrap p {
     padding: 0 2% 0 2%;
 }
 
-.intetactive_green{
+.scroll_block_green_styling{
     background-color: #276745;
     color: #91D4B1;
     text-align: left;
 }
 
-.interactive_brown{
+.scroll_block_brown_styling{
     background-color: #7F553E;
     color:#F2D8C7;
     text-align: left;
 }
+
