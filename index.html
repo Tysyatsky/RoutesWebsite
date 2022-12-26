@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Lab">
-        <meta name="author" content="Tysyatsky">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto%20Serif" rel="stylesheet" type="text/css">
-      </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lab">
+    <meta name="author" content="Tysyatsky">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto%20Serif" rel="stylesheet" type="text/css">
+</head>
+
 <body>
     <nav class="main_navigation_panel">
         <ul>
@@ -15,8 +18,19 @@
             <li><a href="#about">About</a></li>
             <li><a href="#routes">Routes</a></li>
             <li><a href="#contacts">Contacts</a></li>
-          </ul>
+        </ul>
     </nav>
+    <div class="humburger_icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile_menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#routes">Routes</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+    </div> 
     <div id="home">
         <h1>LONDON CITY<br>
             CYCLING FOR <br>EVERYBODY</h1>
@@ -24,7 +38,7 @@
         <div class="hero_baner_img"></div>
     </div>
     <div id="about">
-        <h2> 
+        <h2>
             ABOUT<br>LONDON
         </h2>
         <div class="about_baner_color"></div>
@@ -33,21 +47,24 @@
     <div>
         <div class="about_text about_text_brown">
             <p>
-            Canals, reservoirs and 3,000 parks all make cycling in London an absolute joy. As the famous River Thames cuts through the centre, 
-            it is easy to enjoy flat bike rides throughout the city. Gentle hills can also be found here though, 
-            offering rare chances for views across the capital.
+                Canals, reservoirs and 3,000 parks all make cycling in London an absolute joy. As the famous River
+                Thames cuts through the centre,
+                it is easy to enjoy flat bike rides throughout the city. Gentle hills can also be found here though,
+                offering rare chances for views across the capital.
             </p>
         </div>
         <div class="about_text about_text_green">
             <p>
-            It might be the most populated city in the country but you will find plenty of cycle routes throughout London and its leafy suburbs. 
-            From Richmond Park to Hampstead Heath, it is easy to get out for a spin and find yourself in surprisingly wild nature. 
+                It might be the most populated city in the country but you will find plenty of cycle routes throughout
+                London and its leafy suburbs.
+                From Richmond Park to Hampstead Heath, it is easy to get out for a spin and find yourself in
+                surprisingly wild nature.
             </p>
         </div>
-        </div>
-        
+    </div>
+
     <div id="routes">
-        <h2> 
+        <h2>
             ROUTE <br>SELECTION
         </h2>
         <h3>
@@ -56,42 +73,45 @@
         <div class="route_banner_color"></div>
         <div class="route_banner_img"></div>
     </div>
-    <div class="scroll_padding">
+    <div class="scroll_button_wrap">
+        <button id="prev" class="scroll_button"><i class="arrow up"></i></button>
+    </div>
+    <div id="carousel">
         <div class="scroll_block">
             <div class="scroll_block_brown_styling scroll_block_wrap">
                 <h2>
                     Hyde Park Loop
                 </h2>
                 <p>
-                    There's nothing worse than being squeezed into a 
-                    tourist bus to see London's renowned landmarks - 
+                    There's nothing worse than being squeezed into a
+                    tourist bus to see London's renowned landmarks -
                     especially when the alternative is to hop on a bike
-                    , take in the sights at your own pace and stop 
-                    somewhere for lunch or coffee. Starting at 
-                    Battersea Park, popular with joggers, pedestrians, 
-                    and cyclists, this medium difficulty route takes 
-                    you on 16.6km through some of the city's most 
+                    , take in the sights at your own pace and stop
+                    somewhere for lunch or coffee. Starting at
+                    Battersea Park, popular with joggers, pedestrians,
+                    and cyclists, this medium difficulty route takes
+                    you on 16.6km through some of the city's most
                     famous highlights.
                 </p>
             </div>
             <div>
                 <img class="img_icon" src="img/icon.png" alt="cyclers crossing the road">
-            </div>    
+            </div>
         </div>
         <div class="scroll_block">
             <div class="scroll_block_green_styling scroll_block_wrap">
-                <h2 >
+                <h2>
                     The Wandle Trail
                 </h2>
                 <p>
-                    Want to escape the hustle and bustle 
-                    of south London without leaving the city? 
-                    Experience part of the National Cycle Network 
-                    Route 20 by following the Wandle River from Wandsworth 
-                    through Sutton and Merton to Croydon. The route is a 
-                    mostly traffic-free gravel route with more than ten 
-                    parks and green spaces along the path - perfect for 
-                    taking leisurely breaks and enjoying the peaceful scenery. 
+                    Want to escape the hustle and bustle
+                    of south London without leaving the city?
+                    Experience part of the National Cycle Network
+                    Route 20 by following the Wandle River from Wandsworth
+                    through Sutton and Merton to Croydon. The route is a
+                    mostly traffic-free gravel route with more than ten
+                    parks and green spaces along the path - perfect for
+                    taking leisurely breaks and enjoying the peaceful scenery.
                 </p>
             </div>
             <div>
@@ -104,21 +124,24 @@
                     Battersea Park to Greenwich
                 </h2>
                 <p>
-                    Starting on Park Lane, close to the Marble Arch, 
+                    Starting on Park Lane, close to the Marble Arch,
                     you can rent a bike from Santander, London's public
-                    bike-sharing program, for £2 to access the bikes 
-                    for 24 hours. The first 30 minutes are free, and 
+                    bike-sharing program, for £2 to access the bikes
+                    for 24 hours. The first 30 minutes are free, and
                     £2 for every 30 minutes after that.
-                    Start anti-clockwise and cycle through 
-                    the Italian gardens, then zip past Kensington 
-                    Palace, the Royal Albert Hall and the Albert 
-                    Memorial. 
+                    Start anti-clockwise and cycle through
+                    the Italian gardens, then zip past Kensington
+                    Palace, the Royal Albert Hall and the Albert
+                    Memorial.
                 </p>
             </div>
             <div>
                 <img class="img_icon" src="img/icon3.png" alt="cycler with yellow coat crossing the bridge">
             </div>
         </div>
+    </div>
+    <div class="scroll_button_wrap">
+        <button id="next" class="scroll_button"><i class="arrow down"></i></button>
     </div>
 </body>
 <footer id="contacts">
@@ -139,4 +162,5 @@
     <div class="footer_baner_img"></div>
     <div class="footer_baner_color"></div>
 </footer>
+
 </html>

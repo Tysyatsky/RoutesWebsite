@@ -1,17 +1,17 @@
+  
 html {
-    max-width: 100%;
     overflow-x: hidden;
     overflow: visible;
 }
 
-body{
+body {
     background-color: rgba(242, 216, 199, 0.25);
     font-family: 'Roboto Serif', sans-serif;
     max-width: 100%;
     overflow-x: hidden;
 }
 
-h1{
+h1 {
     position: absolute;
     width: 100%;
     height: 80%;
@@ -49,34 +49,35 @@ h1{
     color: #91D4B1;
 }
 
-li {
+.main_navigation_panel li {
     display: inline;
 }
 
 
-#home{
+#home {
     width: 100%;
     height: 800px;
     background-repeat: no-repeat;
     position: relative;
 }
 
-#about{
+#about {
     position: relative;
     width: 100%;
     height: 700px;
 }
 
-#routes{
+#routes {
     position: relative;
     width: 100%;
     height: 800px;
 }
 
-#contacts{
+#contacts {
     position: relative;
     width: 100%;
     height: 400px;
+    margin-top: 5%;
 }
 
 .hero_baner_color {
@@ -88,7 +89,7 @@ li {
     left: 5%;
     right: 5%;
 }
-  
+
 .hero_baner_img {
     position: absolute;
     width: 100%;
@@ -136,7 +137,7 @@ li {
     mix-blend-mode: multiply;
 }
 
-#about h2{
+#about h2 {
     position: absolute;
     width: 100%;
     height: 80%;
@@ -147,7 +148,7 @@ li {
     font-weight: bold;
     font-size: 64px;
     line-height: 112px;
-    color: #7F553E;
+    color: #F2D8C7;
 }
 
 #routes h2 {
@@ -188,7 +189,7 @@ li {
     z-index: 120;
 }
 
-.about_text{
+.about_text {
     padding: 10px 10px 10px 10px;
     margin-bottom: 5%;
     font-style: normal;
@@ -197,21 +198,21 @@ li {
     line-height: 50px;
 }
 
-.about_text_brown{
+.about_text_brown {
     background-color: #7F553E;
     color: #E5D1BF;
     text-align: right;
     margin-left: 5%;
 }
 
-.about_text_green{
+.about_text_green {
     background-color: #276745;
     color: #91D4B1;
     margin-right: 5%;
     text-align: left;
 }
 
-.footer_baner_color{
+.footer_baner_color {
     position: absolute;
     width: 90%;
     height: 90%;
@@ -221,7 +222,7 @@ li {
     background: #276745;
 }
 
-.footer_baner_img{
+.footer_baner_img {
     position: absolute;
     width: 100%;
     height: 80%;
@@ -231,7 +232,7 @@ li {
     mix-blend-mode: multiply;
 }
 
-.contact{
+.contact {
     position: absolute;
     display: grid;
     grid-template-columns: 2fr 0.9fr;
@@ -246,28 +247,24 @@ li {
     z-index: 120;
 }
 
-.contact h4{
+.contact h4 {
     font-size: 24px;
     line-height: 40px;
 }
 
-.scroll_padding{
-    padding-left: 5%;
-}
-
-.scroll_block{
+.scroll_block {
     display: grid;
     grid-template-columns: 4fr 0.9fr;
 }
 
-.img_icon{
+.img_icon {
     width: 175px;
     height: 175px;
     position: relative;
 }
 
 
-.scroll_block_wrap{
+.scroll_block_wrap {
     display: grid;
     grid-auto-flow: row dense;
     grid-template-columns: 1fr;
@@ -275,7 +272,7 @@ li {
     margin-right: 5%;
 }
 
-.scroll_block_wrap h2{
+.scroll_block_wrap h2 {
     position: relative;
     left: 20px;
 }
@@ -284,15 +281,163 @@ li {
     padding: 0 2% 0 2%;
 }
 
-.scroll_block_green_styling{
+.scroll_block_green_styling {
     background-color: #276745;
     color: #91D4B1;
     text-align: left;
 }
 
-.scroll_block_brown_styling{
+.scroll_block_brown_styling {
     background-color: #7F553E;
-    color:#F2D8C7;
+    color: #F2D8C7;
     text-align: left;
 }
 
+#carouselWrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+#carousel {
+    position: absolute;
+    visibility: hidden;
+    padding-left: 5%;
+}
+
+.scroll_button_wrap {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll_button {
+    font-size: 20px;
+    display: inline;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.scroll_button:hover {
+    border: none;
+    cursor: pointer;
+}
+
+.arrow {
+    border: solid #7F553E;
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.humburger_icon{
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+    max-width: 50px;
+    max-height: 50px;
+    background-color: #276745;
+    padding: 2%;
+    margin-bottom: 2%;
+    position: fixed;
+    z-index: 150;
+}
+
+.humburger_icon div{
+    width: 50px;
+    height: 6px;
+    background-color: #E5D1BF;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .bar1{
+    -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+    transform: rotate(-45deg) translate(-7px, 7px); 
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3{
+    -webkit-transform: rotate(45deg) translate(-7px, -9px);
+    transform: rotate(45deg) translate(-7px, -9px); 
+}
+
+.open .mobile_menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5%;
+    background-color: rgb(39, 103, 69, 80%);
+    color: #F2D8C7;
+    width: 60vh;
+    font-size: 24px;
+}
+
+.open .mobile_menu a:link{
+    text-decoration: none;
+}
+
+.open .mobile_menu a:visited{
+    text-decoration: none;
+    color: #F2D8C7;
+}
+
+.mobile_menu{
+    display: none;
+    width: 200%;
+    padding: 2%;
+    list-style-type: none;
+}
+
+.mobile_menu li {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .main_navigation_panel{
+        display: none;
+    }
+    .humburger_icon {
+        display: block;
+    }
+    h1{
+        font-size: 48px;
+        line-height: 75px;
+    }
+    #about h2 {
+        font-size: 36px;
+    }
+    .about_text{
+        font-size: 24px;
+    }
+    #routes h2 {
+        font-size: 36px;
+    }
+    #routes h3 {
+        font-size: 24px;
+    }
+    #contacts h3{
+        font-size: 24px;
+    }
+    .contact{
+        grid-template-columns: 0.8fr 0.9fr;
+    }
+    .contact h4{
+        font-size: 18px;
+    }
+}
