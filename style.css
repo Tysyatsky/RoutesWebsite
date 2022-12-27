@@ -252,7 +252,7 @@ h1 {
     line-height: 40px;
 }
 
-.scroll_block {
+.scroll_block { /*carousel styling*/
     display: grid;
     grid-template-columns: 4fr 0.9fr;
 }
@@ -293,18 +293,18 @@ h1 {
     text-align: left;
 }
 
-#carouselWrapper {
+#carouselWrapper { /*carousel wrap*/
     position: relative;
     overflow: hidden;
 }
 
-#carousel {
+#carousel { /*carousel item*/
     position: absolute;
     visibility: hidden;
     padding-left: 5%;
 }
 
-.scroll_button_wrap {
+.scroll_button_wrap { 
     margin: 5px 0;
     display: flex;
     align-items: center;
@@ -324,14 +324,14 @@ h1 {
     cursor: pointer;
 }
 
-.arrow {
+.arrow { /*arrows styling*/
     border: solid #7F553E;
     border-width: 0 10px 10px 0;
     display: inline-block;
     padding: 3px;
 }
 
-.up {
+.up { 
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
 }
@@ -341,7 +341,7 @@ h1 {
     -webkit-transform: rotate(45deg);
 }
 
-.humburger_icon{
+.humburger_icon{ /*styling a button*/
     margin: auto 0;
     display: none;
     cursor: pointer;
@@ -354,7 +354,7 @@ h1 {
     z-index: 150;
 }
 
-.humburger_icon div{
+.humburger_icon div{ /*styling stripes*/
     width: 50px;
     height: 6px;
     background-color: #E5D1BF;
@@ -362,7 +362,7 @@ h1 {
     transition: 0.4s;
 }
 
-.open .bar1{
+.open .bar1{ /*opened menu button*/
     -webkit-transform: rotate(-45deg) translate(-7px, 7px);
     transform: rotate(-45deg) translate(-7px, 7px); 
 }
@@ -376,7 +376,7 @@ h1 {
     transform: rotate(45deg) translate(-7px, -9px); 
 }
 
-.open .mobile_menu{
+.open .mobile_menu{ /*mobile menu styling*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -408,7 +408,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) { /*setting telephone view*/
     .main_navigation_panel{
         display: none;
     }
